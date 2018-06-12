@@ -33,6 +33,8 @@
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.microToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.outputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPortListen = new System.Windows.Forms.Label();
             this.labelMyPort = new System.Windows.Forms.Label();
             this.labelServerIP = new System.Windows.Forms.Label();
@@ -44,11 +46,6 @@
             this.mylocalhostlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.audioMyPort = new System.Windows.Forms.TextBox();
-            this.audioFriendPort = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMine)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFriend)).BeginInit();
@@ -91,12 +88,28 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.camToolStripMenuItem,
             this.startToolStripMenuItem,
-            this.stopToolStripMenuItem});
+            this.stopToolStripMenuItem,
+            this.microToolStripMenuItem,
+            this.outputToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2439, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1974, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // microToolStripMenuItem
+            // 
+            this.microToolStripMenuItem.Enabled = false;
+            this.microToolStripMenuItem.Name = "microToolStripMenuItem";
+            this.microToolStripMenuItem.Size = new System.Drawing.Size(88, 36);
+            this.microToolStripMenuItem.Text = "Micro";
+            // 
+            // outputToolStripMenuItem
+            // 
+            this.outputToolStripMenuItem.Enabled = false;
+            this.outputToolStripMenuItem.Name = "outputToolStripMenuItem";
+            this.outputToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
+            this.outputToolStripMenuItem.Text = "Output";
             // 
             // labelPortListen
             // 
@@ -119,7 +132,7 @@
             // labelServerIP
             // 
             this.labelServerIP.AutoSize = true;
-            this.labelServerIP.Location = new System.Drawing.Point(588, 271);
+            this.labelServerIP.Location = new System.Drawing.Point(278, 271);
             this.labelServerIP.Name = "labelServerIP";
             this.labelServerIP.Size = new System.Drawing.Size(100, 25);
             this.labelServerIP.TabIndex = 6;
@@ -143,7 +156,7 @@
             // 
             // textBoxServerIP
             // 
-            this.textBoxServerIP.Location = new System.Drawing.Point(593, 271);
+            this.textBoxServerIP.Location = new System.Drawing.Point(283, 271);
             this.textBoxServerIP.Name = "textBoxServerIP";
             this.textBoxServerIP.Size = new System.Drawing.Size(145, 31);
             this.textBoxServerIP.TabIndex = 9;
@@ -151,7 +164,7 @@
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(587, 192);
+            this.buttonConnect.Location = new System.Drawing.Point(277, 192);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(143, 47);
             this.buttonConnect.TabIndex = 10;
@@ -162,9 +175,9 @@
             // pictureBoxFriend
             // 
             this.pictureBoxFriend.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBoxFriend.Location = new System.Drawing.Point(809, 43);
+            this.pictureBoxFriend.Location = new System.Drawing.Point(810, 66);
             this.pictureBoxFriend.Name = "pictureBoxFriend";
-            this.pictureBoxFriend.Size = new System.Drawing.Size(1630, 1135);
+            this.pictureBoxFriend.Size = new System.Drawing.Size(1142, 918);
             this.pictureBoxFriend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFriend.TabIndex = 11;
             this.pictureBoxFriend.TabStop = false;
@@ -172,7 +185,7 @@
             // mylocalhostlabel
             // 
             this.mylocalhostlabel.AutoSize = true;
-            this.mylocalhostlabel.Location = new System.Drawing.Point(582, 122);
+            this.mylocalhostlabel.Location = new System.Drawing.Point(272, 122);
             this.mylocalhostlabel.Name = "mylocalhostlabel";
             this.mylocalhostlabel.Size = new System.Drawing.Size(0, 25);
             this.mylocalhostlabel.TabIndex = 0;
@@ -180,7 +193,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(588, 122);
+            this.label1.Location = new System.Drawing.Point(278, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 12;
@@ -195,60 +208,12 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "video";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(358, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 25);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "audio";
-            // 
-            // audioMyPort
-            // 
-            this.audioMyPort.Location = new System.Drawing.Point(320, 271);
-            this.audioMyPort.Name = "audioMyPort";
-            this.audioMyPort.Size = new System.Drawing.Size(145, 31);
-            this.audioMyPort.TabIndex = 18;
-            this.audioMyPort.Text = "8011";
-            // 
-            // audioFriendPort
-            // 
-            this.audioFriendPort.Location = new System.Drawing.Point(320, 201);
-            this.audioFriendPort.Name = "audioFriendPort";
-            this.audioFriendPort.Size = new System.Drawing.Size(145, 31);
-            this.audioFriendPort.TabIndex = 17;
-            this.audioFriendPort.Text = "8010";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(315, 243);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 25);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "My Port";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(315, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Port listen";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(2439, 1190);
-            this.Controls.Add(this.audioMyPort);
-            this.Controls.Add(this.audioFriendPort);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1974, 1029);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mylocalhostlabel);
@@ -294,11 +259,8 @@
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.PictureBox pictureBoxFriend;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox audioMyPort;
-        private System.Windows.Forms.TextBox audioFriendPort;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem microToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outputToolStripMenuItem;
     }
 }
 
